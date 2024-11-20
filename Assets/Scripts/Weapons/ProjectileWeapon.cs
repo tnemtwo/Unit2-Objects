@@ -2,18 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "New Weapon", menuName ="Projectile Weapon")]
 public class ProjectileWeapon : Weapon
 {
-    private GameObject projectilePrefab;
+    [SerializeField] private Bullet projectilePrefab;
 
-    public ProjectileWeapon(Transform tip, GameObject bulletReference) : base(tip)
+    public override void Shoot(Transform weaponTip)
     {
-        projectilePrefab = bulletReference;
-    }
+        Bullet bulletClone = GameObject.Instantiate(projectilePrefab, weaponTip.position, weaponTip.rotation);
+        bulletClone.InitializeBullet(damage);
 
-    public override void Shoot()
-    {
-        GameObject.Instantiate(projectilePrefab, weaponTip.position, weaponTip.rotation);
     }
 
     public override void Reload()

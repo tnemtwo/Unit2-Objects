@@ -31,7 +31,13 @@ public class PlayerInput : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            player.currentWeapon.Shoot();
+            player.Attack();
+            //start shooting
+        }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            //stop shooting
         }
         
     }
