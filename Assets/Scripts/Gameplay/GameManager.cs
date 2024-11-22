@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -12,8 +13,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<Enemy> listOfAllEnemiesAlive;
 
     private ScoreManager scoreManager;
+
+    public UnityEvent OnGameStart;
+    public UnityEvent OnGameOver;
+
     void Start()
     {
+        
         if (instance == null)
             instance = this;
         else
@@ -23,8 +29,16 @@ public class GameManager : MonoBehaviour
 
         scoreManager = GetComponent<ScoreManager>();
 
+        FindObjectOfType<Player>().healthValue.OnDied.AddListener(GameOver);
+
         StartCoroutine(SpawnWaveOfEnemies());
         SpawnEnemy();
+    }
+
+    private void GameOver()
+    {
+        OnGameOver.Invoke();
+        StopAllCoroutines();
     }
 
     private Enemy SpawnEnemy()
@@ -72,5 +86,6 @@ public class GameManager : MonoBehaviour
         }
         //do something else here after 5 house
     }
+
 
 }

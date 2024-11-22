@@ -10,7 +10,7 @@ public class Character : MonoBehaviour
 
     protected virtual void Start()
     {
-        healthValue = new Health(20);
+        healthValue = new Health(1);
         healthValue.OnDied.AddListener(PlayDeadEffect);
         
     }
@@ -29,6 +29,7 @@ public class Character : MonoBehaviour
 
     public virtual void PlayDeadEffect()
     {
+        //Instantiate(certainPrefab)
         Destroy(gameObject);
     }
 
