@@ -19,6 +19,7 @@ public class PlayerInput : MonoBehaviour
     void Update()
     {
         direction.x = Input.GetAxis("Horizontal");
+        
         direction.y = Input.GetAxis("Vertical");
 
         player.Move(direction);

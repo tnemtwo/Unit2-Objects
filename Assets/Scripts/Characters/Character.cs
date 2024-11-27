@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [SerializeField] private float health = 10f;
     [SerializeField] private Rigidbody2D myRigidbody;
     [SerializeField] private float movementSpeed = 10f;
+
+    [SerializeField] private GameObject dieEffect;
+
 
     public Health healthValue;
     public Weapon currentWeapon;
 
     protected virtual void Start()
     {
-        healthValue = new Health(1);
+        healthValue = new Health(health);
         healthValue.OnDied.AddListener(PlayDeadEffect);
         
     }
@@ -29,7 +33,7 @@ public class Character : MonoBehaviour
 
     public virtual void PlayDeadEffect()
     {
-        //Instantiate(certainPrefab)
+        Instantiate(dieEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 

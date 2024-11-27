@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
 
     public void UpdateHealthValue(float health)
     {
-        healthText.text = health.ToString();
+        healthText.text = health.ToString("F2");
 
     }
 }

@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 779165434581884458, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.114
+      objectReference: {fileID: 0}
+    - target: {fileID: 779165434581884458, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.312
+      objectReference: {fileID: 0}
     - target: {fileID: 1918453354664713262, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -56,33 +64,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2291350063562325530, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4606214303545869301, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 180a81867c718d84c8d6cadd73796218, type: 3}
     - target: {fileID: 4606214303545869301, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
       propertyPath: m_Color.b
-      value: 0.216981
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4606214303545869301, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
       propertyPath: m_Color.g
-      value: 0.216981
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4606214303545869301, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8500794465988436132, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
-      propertyPath: m_Color.b
-      value: 0.045113944
+    - target: {fileID: 5416033022067755224, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.109
       objectReference: {fileID: 0}
-    - target: {fileID: 8500794465988436132, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8500794465988436132, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
-      propertyPath: m_Color.r
-      value: 0.57232696
-      objectReference: {fileID: 0}
-    - target: {fileID: 8500794465988436132, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
+    - target: {fileID: 5416033022067755224, guid: fdc4845f20e84d44da2f950af0136980, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.306
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -114,7 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e198c3f356961284ebf03567039f33a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 5
   myRigidbody: {fileID: 3576040712213611694}
   movementSpeed: 7
+  dieEffect: {fileID: 8194992990867289339, guid: 99bc28c0d45f51c4fbac01080b73edc7, type: 3}
+  particle: {fileID: 0}
+  currentWeapon: {fileID: 0}
   distanceToStop: 3
   attackCooldown: 3
